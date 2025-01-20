@@ -1,54 +1,131 @@
 /* Загальні стилі */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
     color: #333;
     margin: 0;
+    padding: 0;
+}
+
+/* Банер */
+.banner {
+    width: 80%; /* Встановлюємо ширину банеру */
+    height: 400px;
+    background-image: url('images/image2.jpg'); /* Ваше зображення для банера */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: 0 auto; /* Центруємо банер */
+    border: 3px solid #4CAF50; /* Додаємо рамку */
+    border-radius: 10px; /* Заокруглюємо кути */
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Додаємо напівпрозорий чорний фон */
+}
+
+.banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Тінь для покращення контрасту */
+}
+
+/* Стилі для основного контенту */
+main {
     padding: 20px;
 }
 
-h1, h2 {
+/* Заголовки */
+h2 {
     text-align: center;
-    color: #2c3e50;
+    color: #333; /* Чорний колір для заголовків */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
 }
 
-p {
-    line-height: 1.6;
-}
-
+/* Секції */
 section {
     background: #ffffff;
     margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    max-width: 900px;
 }
 
-/* Селектори класів */
+section h2 {
+    font-size: 1.8rem;
+    color: #333; /* Чорний колір для заголовків */
+    margin-bottom: 15px;
+}
+
+section p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Стиль для виділеного тексту */
 .highlight {
-    background-color: #fffae6;
-    border-left: 5px solid #f1c40f;
-    padding: 10px;
+    background-color: #e8ffe6;
+    border-left: 5px solid #45a049;
+    padding: 15px;
+    font-size: 1.1rem;
+    color: #333;
 }
 
+/* Контейнер для основного контенту */
 .container {
     border: 2px solid #ddd;
     padding: 15px;
     border-radius: 8px;
+    background-color: #fafafa;
+    margin-bottom: 20px;
 }
 
-/* Селектори ідентифікаторів */
+.container ul {
+    margin-left: 20px;
+    list-style-type: square;
+    font-size: 1rem;
+    color: #333;
+}
+
+.container li {
+    margin-bottom: 10px;
+}
+
+/* Стиль для блоку адміністратора */
 #admin {
-    background-color: #dff9fb;
-    padding: 15px;
-    border: 2px solid #00cec9;
+    background-color: #45a049#dff9fb;
+    padding: 20px;
+    border: 2px solid #45a049;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#admin ul {
+    margin-left: 20px;
+    list-style-type: square;
+    font-size: 1rem;
+}
+
+#admin li {
+    margin-bottom: 10px;
 }
 
 /* Списки та таблиці */
 ul {
-    list-style: disc;
+    list-style-type: disc;
     margin: 10px 0 20px 20px;
 }
 
@@ -56,20 +133,52 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 table th, table td {
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 12px;
     text-align: left;
+    font-size: 1rem;
 }
 
 table th {
-    background-color: #2980b9;
+    background-color: #45a049;
     color: white;
+    font-size: 1.1rem;
 }
 
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Клас для додаткових стилів */
 .advanced {
     text-shadow: 1px 1px 3px #999;
     font-style: italic;
+}
+
+/* Додаткові стилі для кнопок (якщо потрібно) */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #45a049;
 }
